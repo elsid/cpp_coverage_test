@@ -1,0 +1,15 @@
+language: cpp
+
+compiler:
+- gcc
+
+install:
+- pip install --user cpp-coveralls
+
+script:
+- g++ --coverage -O0 -g -o test main.cpp
+- ./test
+
+after_success:
+- coveralls
+- bash <(curl -s https://codecov.io/bash)
