@@ -10,5 +10,6 @@ int f(bool x) {
 
 int main() {
     f(true);
+    f(false);
     return 0;
 }
